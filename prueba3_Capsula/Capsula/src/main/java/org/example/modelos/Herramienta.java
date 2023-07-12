@@ -4,7 +4,7 @@ public class Herramienta {
     private String nombre;
     private Double danoCausado; // de cero a 100
 
-    
+
 
     //Constructor vacio
     public Herramienta() {
