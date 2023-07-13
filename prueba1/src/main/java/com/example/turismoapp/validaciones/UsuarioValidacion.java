@@ -26,7 +26,7 @@ public class UsuarioValidacion {
         {
             throw new Exception("Señor usuario su nombre debe tener más de 10 caracteres");
         }
-        
+
         else
         {
             return true;

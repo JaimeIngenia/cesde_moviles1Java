@@ -1,5 +1,7 @@
 package com.example.turismoapp.modelos;
 
+import com.example.turismoapp.validaciones.UsuarioValidacion;
+
 public class Usuario {
 
 //ATRIBUTOS - VARIABLES DATOS
@@ -8,6 +10,7 @@ public class Usuario {
     private String documento;
     private Integer ubicacion;
     private String correoElectronico;
+    private UsuarioValidacion ValidacionJaime = new UsuarioValidacion();
 
 
 //CONSTRUCTOR VACIO
@@ -38,7 +41,17 @@ public class Usuario {
     }
 
     public void setNombres(String nombres) {
-        this.nombres = nombres;
+
+        try
+        {
+            this.ValidacionJaime.validarNombre(nombres);
+            this.nombres = nombres;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 
     public String getDocumento() {
