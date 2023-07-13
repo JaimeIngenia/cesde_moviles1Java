@@ -1,12 +1,15 @@
 package com.example.turismoapp.modelos;
 
+import com.example.turismoapp.validaciones.LocalValidacion;
+
 public class Local {
 //ATRIBUTOS - VARIABLES DATOS
     private Integer id;
-    private Integer nit;
+    private String nit;
     private String nombre;
     private String ubicacion;
     private String descripcion;
+    private LocalValidacion validarObjetoLocal = new LocalValidacion();
 
 //Constructor vacio
     public Local(Integer id) {
@@ -14,7 +17,7 @@ public class Local {
     }
 
 //Constructor lleno
-    public Local(Integer id, Integer nit, String nombre, String ubicacion, String descripcion) {
+    public Local(Integer id, String nit, String nombre, String ubicacion, String descripcion) {
         this.id = id;
         this.nit = nit;
         this.nombre = nombre;
@@ -31,12 +34,21 @@ public class Local {
         this.id = id;
     }
 
-    public Integer getNit() {
+    public String getNit() {
         return nit;
     }
 
-    public void setNit(Integer nit) {
-        this.nit = nit;
+    public void setNit(String nit) {
+        try
+        {
+            this.validarObjetoLocal.validarNit(nit);
+            this.nit = nit;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 
     public String getNombre() {
@@ -44,7 +56,16 @@ public class Local {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        try
+        {
+            this.validarObjetoLocal.validarNombreLocal(nombre);
+            this.nombre = nombre;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 
     public String getUbicacion() {

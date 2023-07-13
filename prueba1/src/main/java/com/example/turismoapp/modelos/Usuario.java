@@ -8,9 +8,9 @@ public class Usuario {
     private Integer id;
     private String nombres;
     private String documento;
-    private Integer ubicacion;
+    private String ubicacion;
     private String correoElectronico;
-    private UsuarioValidacion ValidacionJaime = new UsuarioValidacion();
+    private UsuarioValidacion validacionJaime = new UsuarioValidacion();
 
 
 //CONSTRUCTOR VACIO
@@ -18,7 +18,7 @@ public class Usuario {
 
     }
 //CONSTRUCTOR LLENO
-    public Usuario(Integer id, String nombres, String documento, Integer ubicacion, String correoElectronico) {
+    public Usuario(Integer id, String nombres, String documento, String ubicacion, String correoElectronico) {
         this.id = id;
         this.nombres = nombres;
         this.documento = documento;
@@ -44,7 +44,7 @@ public class Usuario {
 
         try
         {
-            this.ValidacionJaime.validarNombre(nombres);
+            this.validacionJaime.validarNombre(nombres);
             this.nombres = nombres;
         }
         catch (Exception error)
@@ -62,12 +62,22 @@ public class Usuario {
         this.documento = documento;
     }
 
-    public Integer getUbicacion() {
+    public String getUbicacion() {
         return ubicacion;
     }
 
-    public void setUbicacion(Integer ubicacion) {
-        this.ubicacion = ubicacion;
+    public void setUbicacion(String ubicacion) {
+
+        try
+        {
+            this.validacionJaime.validarUbicacion(ubicacion);
+            this.ubicacion = ubicacion;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 
     public String getCorreoElectronico() {
@@ -75,6 +85,15 @@ public class Usuario {
     }
 
     public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
+        try
+        {
+            this.validacionJaime.validarCorreo(correoElectronico);
+            this.correoElectronico = correoElectronico;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 }

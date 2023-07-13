@@ -1,4 +1,6 @@
 package com.example.turismoapp.modelos;
+import com.example.turismoapp.validaciones.OfertaValidacion;
+
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -11,6 +13,8 @@ public class Oferta {
     private LocalDate fechaFin;
     private Double costoPersona;
     private Integer idLocal;
+
+    private OfertaValidacion validarObjetoOferta = new OfertaValidacion();
 
 //CONSTRUCTOR VACIO
 
@@ -45,7 +49,16 @@ public class Oferta {
     }
 
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        try
+        {
+            this.validarObjetoOferta.validarTitulo(titulo);
+            this.titulo = titulo;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 
     public String getDescripcion() {
@@ -77,7 +90,16 @@ public class Oferta {
     }
 
     public void setCostoPersona(Double costoPersona) {
-        this.costoPersona = costoPersona;
+        try
+        {
+            this.validarObjetoOferta.validarCosto(costoPersona);
+            this.costoPersona = costoPersona;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
     }
 
     public Integer getIdLocal() {

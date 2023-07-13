@@ -33,6 +33,36 @@ public class UsuarioValidacion {
         }
     }
 
+    public Boolean validarUbicacion (String ubicacion)throws Exception {
+        String expresionRegularUbicacion = "^[1-4](zona centro|zona sur|zona norte|otras)$";
+        Pattern patronUbicacion = Pattern.compile(expresionRegularUbicacion);
+        Matcher coincidenciaUbicacion = patronUbicacion.matcher(expresionRegularUbicacion);
+
+        if(!coincidenciaUbicacion.matches())
+        {
+            throw new Exception("Señor usuario su ubicacion esta mal");
+        }
+        else
+        {
+            return true;
+        }
+
+    }
+
+    public Boolean validarCorreo (String correo) throws Exception {
+        String expresionRegularCorreo = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        Pattern patronCorreo = Pattern.compile(expresionRegularCorreo);
+        Matcher coincidenciaCorreo = patronCorreo.matcher(expresionRegularCorreo);
+        if(!coincidenciaCorreo.matches())
+        {
+            throw new Exception("Señor usuario su correo esta mal");
+        }
+        else
+        {
+            return true;
+        }
+    }
+
 
 
 }

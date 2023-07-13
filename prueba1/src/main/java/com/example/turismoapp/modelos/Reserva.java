@@ -1,4 +1,6 @@
 package com.example.turismoapp.modelos;
+import com.example.turismoapp.validaciones.ReservaValidacion;
+
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -9,6 +11,8 @@ public class Reserva {
     private Integer idOferta;
     private Double costoTotal;
     private LocalDate fechaReserva;
+
+    private ReservaValidacion validarObjetoReserva = new ReservaValidacion();
 
 
 //CONSTRUCTOR VACIO
@@ -65,6 +69,14 @@ public class Reserva {
     }
 
     public void setFechaReserva(LocalDate fechaReserva) {
-        this.fechaReserva = fechaReserva;
+        try
+        {
+            this.validarObjetoReserva.validarFechaReserva(fechaReserva);
+            this.fechaReserva = fechaReserva;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
     }
 }
