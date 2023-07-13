@@ -8,7 +8,7 @@ public class Usuario {
     private Integer id;
     private String nombres;
     private String documento;
-    private String ubicacion;
+    private Integer ubicacion;
     private String correoElectronico;
     private UsuarioValidacion validacionJaime = new UsuarioValidacion();
 
@@ -18,7 +18,7 @@ public class Usuario {
 
     }
 //CONSTRUCTOR LLENO
-    public Usuario(Integer id, String nombres, String documento, String ubicacion, String correoElectronico) {
+    public Usuario(Integer id, String nombres, String documento, Integer ubicacion, String correoElectronico) {
         this.id = id;
         this.nombres = nombres;
         this.documento = documento;
@@ -62,11 +62,11 @@ public class Usuario {
         this.documento = documento;
     }
 
-    public String getUbicacion() {
+    public Integer getUbicacion() {
         return ubicacion;
     }
 
-    public void setUbicacion(String ubicacion) {
+    public void setUbicacion(Integer ubicacion) {
 
         try
         {

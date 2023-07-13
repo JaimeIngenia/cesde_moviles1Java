@@ -1,5 +1,6 @@
 package com.example.turismoapp.validaciones;
 
+import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,6 +20,20 @@ public class OfertaValidacion {
             return true;
         }
     }
+
+
+    public Boolean validarFechas(LocalDate fechaInicio, LocalDate fechaFin) throws Exception {
+        boolean esValido = fechaInicio.isAfter(fechaFin);
+        if(!esValido)
+        {
+            throw new Exception("Señor usuario su fecha inicio no puede ser mayor a la fecha fin");
+        }
+        else
+        {
+            return true;
+        }
+    }
+
 
     public Boolean validarCosto(Double costoPersona) throws Exception {
         if(costoPersona<0){
