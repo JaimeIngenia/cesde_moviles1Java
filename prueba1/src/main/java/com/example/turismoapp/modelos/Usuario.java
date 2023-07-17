@@ -96,4 +96,19 @@ public class Usuario {
         }
 
     }
+
+    //METODO ESPECIAL PARA PRESENTAR LA INFO DE LA CLASE
+
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nombres='" + nombres + '\'' +
+                ", documento='" + documento + '\'' +
+                ", ubicacion=" + ubicacion +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                ", validacionJaime=" + validacionJaime +
+                '}';
+    }
 }

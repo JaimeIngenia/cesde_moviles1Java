@@ -1,23 +1,38 @@
 package com.example.turismoapp;
 
+import com.example.turismoapp.modelos.Usuario;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import java.util.Scanner;
 import java.io.IOException;
 
-public class Main extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
+
+public class Main {
+
 
     public static void main(String[] args) {
-        launch();
+        Scanner teclado = new Scanner(System.in);
+        Usuario usuarioObjeto = new Usuario();
+
+        System.out.println("***Bienvenido***");
+
+        System.out.println("1. Recogiendo datos del usuario: ");
+        System.out.println("  -  Digita tus nombres y apellidos");
+        usuarioObjeto.setNombres(teclado.nextLine());
+
+        System.out.println(usuarioObjeto.getNombres());
+
+        System.out.println("Digite su correo electrónico: ");
+        usuarioObjeto.setCorreoElectronico(teclado.nextLine());
+        System.out.println(usuarioObjeto.getCorreoElectronico());
+
+        System.out.println("Mira todos los datos");
+        System.out.println(usuarioObjeto.toString());
+
+
+
+
     }
 }

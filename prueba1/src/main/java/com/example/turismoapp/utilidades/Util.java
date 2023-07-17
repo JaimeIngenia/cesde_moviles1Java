@@ -10,6 +10,7 @@ public class Util {
         Pattern patronFuncion = Pattern.compile(expresionRegular);
         Matcher coincidenciaFuncion = patronFuncion.matcher(cadena);
 
+        //return coincidenciaFuncion.matches();
         if(coincidenciaFuncion.matches())
         {
             return true;

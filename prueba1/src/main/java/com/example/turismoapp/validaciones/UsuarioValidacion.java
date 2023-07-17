@@ -18,7 +18,11 @@ public class UsuarioValidacion {
     //METODOS ORDINARIOS PARA VALIDACIONES
 
     public Boolean validarNombre(String nombres)throws Exception {
-        String expresionRegular = "^[A-Za-z]+$";
+        String expresionRegular = "^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$";
+        //^[A-Za-z\s]+$
+        //^[A-Za-z]+$
+        //^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$
+
 
         //Pattern patron = Pattern.compile(expresionRegular);
         //Matcher coincidencia = patron.matcher(nombres);
