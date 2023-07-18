@@ -217,10 +217,23 @@ public class Reserva {
 
     public Long diferenciaFechas (LocalDate fechaUno, LocalDate fechaDos ) throws Exception {
 
-        Long diferencia = ChronoUnit.DAYS.between(fechaUno,fechaDos);
-        this.validarObjetoReserva.validarDiferenciaFechaReserva(diferencia);
+        //Long diferencia = ChronoUnit.DAYS.between(fechaUno,fechaDos);
+//        this.validarObjetoReserva.validarDiferenciaFechaReserva(diferencia);
 
-        return diferencia;
+//        return diferencia;
+
+
+        try
+        {
+            Long diferencia = ChronoUnit.DAYS.between(fechaUno,fechaDos);
+            this.validarObjetoReserva.validarDiferenciaFechaReserva(diferencia);
+            return diferencia;
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+        return null;
     }
 
 
