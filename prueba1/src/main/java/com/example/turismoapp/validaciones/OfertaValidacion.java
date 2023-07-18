@@ -1,22 +1,38 @@
 package com.example.turismoapp.validaciones;
 
+import com.example.turismoapp.utilidades.Util;
+
 import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class OfertaValidacion {
 
-    public Boolean validarTitulo(String titulo)throws Exception{
-        String expresionRegularTitulo = "^.{1,20}$\n";
-        Pattern patronTitulo = Pattern.compile(expresionRegularTitulo);
-        Matcher coincidenciaTitulo = patronTitulo.matcher(expresionRegularTitulo);
+    //ATRIBUTOS
 
-        if(!coincidenciaTitulo.matches())
+    protected Util utilObjeto = new Util();
+
+    //METODOS
+
+    public Boolean validarTitulo(String titulo)throws Exception{
+        String expresionRegularTitulo = "^.{1,20}$";
+
+
+        if(!utilObjeto.buscarCoincidencias(expresionRegularTitulo,titulo))
         {
-            throw new Exception("Señor usuario su Titulo no puede tener más de 10 caracteres");
+            throw new Exception("Señor usuario su Titulo no puede tener más de 20 caracteres");
         }
         else
         {
+            return true;
+        }
+    }
+
+    public Boolean validarDiferenciaFechaOferta (Long x) throws Exception {
+        if(x<0){
+            throw new Exception("Señor usuario la fecha final es menor a la fecha inicial, eso es ilógico!");
+        }
+        else {
             return true;
         }
     }
@@ -43,4 +59,6 @@ public class OfertaValidacion {
             return true;
         }
     }
+
+
 }

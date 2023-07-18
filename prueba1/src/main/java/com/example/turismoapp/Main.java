@@ -1,5 +1,7 @@
 package com.example.turismoapp;
 
+import com.example.turismoapp.modelos.Local;
+import com.example.turismoapp.modelos.Oferta;
 import com.example.turismoapp.modelos.Reserva;
 import com.example.turismoapp.modelos.Usuario;
 import com.example.turismoapp.validaciones.ReservaValidacion;
@@ -21,12 +23,96 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         Usuario usuarioObjeto = new Usuario();
         Reserva reservaObjeto = new Reserva();
+        Local localObjeto = new Local();
+        Oferta ofertaObjeto = new Oferta();
 
         System.out.println("***Bienvenido***");
         System.out.println("1. Recogiendo datos del usuario: ");
 
+        //VALIDACIONES PARA USUARIO
 
-        System.out.println("Ingrese el año de la fecha1");
+        /*System.out.println("  -  Digita tus nombres y apellidos");
+        usuarioObjeto.setNombres(teclado.nextLine());
+        System.out.println(usuarioObjeto.getNombres());
+
+        System.out.println("Digite su correo electrónico: ");
+        usuarioObjeto.setCorreoElectronico(teclado.nextLine());
+        System.out.println(usuarioObjeto.getCorreoElectronico());
+
+        System.out.println("Mira todos los datos");
+        System.out.println(usuarioObjeto.toString());*/
+
+        //VALIDACIONES LOCAL
+
+        /*        System.out.println("Ingrese el número nit, en tabla Local");
+        localObjeto.setNit(teclado.nextLine());
+        System.out.println(localObjeto.getNit());
+
+        System.out.println("Ingrese el nombre de su empresa, en tabla Local");
+        localObjeto.setNombre(teclado.nextLine());
+        System.out.println(localObjeto.getNombre());
+
+        System.out.println("Mira todos los datos");
+        System.out.println(localObjeto.toString());*/
+
+        //VALIDACIONES OFERTA
+
+        /*System.out.println("Digite el titulo de la tabla Ofertas");
+        ofertaObjeto.setTitulo(teclado.nextLine());
+        System.out.println(ofertaObjeto.getTitulo());*/
+
+        /*System.out.println("Ingrese el año de la fecha1");
+        String anioPrincipal = teclado.next();
+        ofertaObjeto.setAnioFechaUno(anioPrincipal);
+
+        System.out.println("Ingrese el mes de la fecha1");
+        String mesPrincipal = teclado.next();
+        ofertaObjeto.setMesFechaUno(mesPrincipal);
+
+        System.out.println("Ingrese el día de la fecha1");
+        String diaPrincipal = teclado.next();
+        ofertaObjeto.setDiaFechaUno(diaPrincipal);
+
+        Integer anioPrincipalInteger = Integer.parseInt(anioPrincipal);
+        Integer mesPrincipalInteger = Integer.parseInt(mesPrincipal);
+        Integer diaPrincipalInteger = Integer.parseInt(diaPrincipal);
+//*********************************************************************************************************************************************
+        LocalDate fechaUnoFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioPrincipalInteger,mesPrincipalInteger,diaPrincipalInteger);
+//*********************************************************************************************************************************************
+
+
+        System.out.println("Ingrese el año de la fecha2");
+        String anioSecundario = teclado.next();
+        ofertaObjeto.setAnioFechaDos(anioSecundario);
+
+        System.out.println("Ingrese el mes de la fecha2");
+        String mesSecundario = teclado.next();
+        ofertaObjeto.setMesFechaDos(mesSecundario);
+
+        System.out.println("Ingrese el día de la fecha2");
+        String diaSecundario = teclado.next();
+        ofertaObjeto.setDiaFechaDos(diaSecundario);
+
+        Integer anioSecundariolInteger = Integer.parseInt(anioSecundario);
+        Integer mesSecundarioInteger = Integer.parseInt(mesSecundario);
+        Integer diaSecundarioInteger = Integer.parseInt(diaSecundario);
+//*********************************************************************************************************************************************
+        LocalDate fechaDosFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioSecundariolInteger,mesSecundarioInteger,diaSecundarioInteger);
+//*********************************************************************************************************************************************
+
+        System.out.println(ofertaObjeto.diferenciaFechas(fechaUnoFaseUno,fechaDosFaseUno));*/
+
+        /*System.out.println("Digite el costo por persona de la tabla Oferta");
+        ofertaObjeto.setCostoPersona(teclado.nextDouble());
+        System.out.println(ofertaObjeto.getCostoPersona());*/
+
+        //VALIDACIONES RESERVA
+
+
+
+        //VALIDACIONES FECHAS
+
+        /*System.out.println("Ingrese el año de la fecha1");
         String anioPrincipal = teclado.next();
         reservaObjeto.setAnioFechaReserva(anioPrincipal);
 
@@ -66,7 +152,7 @@ public class Main {
 //*********************************************************************************************************************************************
 
         System.out.println(reservaObjeto.diferenciaFechas(fechaUnoFaseUno,fechaDosFaseUno));
-
+*/
 
 
 

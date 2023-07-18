@@ -12,11 +12,10 @@ public class Local {
     private LocalValidacion validarObjetoLocal = new LocalValidacion();
 
 //Constructor vacio
-    public Local(Integer id) {
-        this.id = id;
+    public Local() {
     }
 
-//Constructor lleno
+    //Constructor lleno
     public Local(Integer id, String nit, String nombre, String ubicacion, String descripcion) {
         this.id = id;
         this.nit = nit;
@@ -82,5 +81,17 @@ public class Local {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    @Override
+    public String toString() {
+        return "Local{" +
+                "id=" + id +
+                ", nit='" + nit + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", ubicacion='" + ubicacion + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", validarObjetoLocal=" + validarObjetoLocal +
+                '}';
     }
 }
