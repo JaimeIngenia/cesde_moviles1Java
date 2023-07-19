@@ -1,5 +1,6 @@
 package com.example.turismoapp.validaciones;
 
+import com.example.turismoapp.utilidades.Mensajes;
 import com.example.turismoapp.utilidades.Util;
 
 import java.util.regex.Matcher;
@@ -10,6 +11,8 @@ public class UsuarioValidacion {
 //ATRIBUTOS
 
     protected Util utilObjeto = new Util();
+
+
 
 //CONSTRUCTOR VACIO
     public UsuarioValidacion() {
@@ -28,12 +31,13 @@ public class UsuarioValidacion {
         //Matcher coincidencia = patron.matcher(nombres);
         if(!utilObjeto.buscarCoincidencias(expresionRegular,nombres))
         {
-            throw new Exception("Señor usuario su nombre solo puede tener letras");
+            //throw new Exception("Señor usuario su nombre solo puede tener letras");
+            throw new Exception(Mensajes.NOMBRE_INVALIDO_SOLO_LETRAS.getMensaje());
         }
 
         else if (nombres.length()<10)
         {
-            throw new Exception("Señor usuario su nombre debe tener más de 10 caracteres");
+            throw new Exception(Mensajes.NOMBRE_INVALIDO_MUY_CORTO.getMensaje());
         }
 
         else
@@ -52,7 +56,7 @@ public class UsuarioValidacion {
         }
         else
         {
-            throw new Exception("Señor usuario su ubicacion no es válida");
+            throw new Exception(Mensajes.UBICACION_INVALIDO.getMensaje());
         }
     }
 
@@ -62,7 +66,7 @@ public class UsuarioValidacion {
         //Matcher coincidenciaCorreo = patronCorreo.matcher(expresionRegularCorreo);
         if(!utilObjeto.buscarCoincidencias(expresionRegularCorreo,correo))
         {
-            throw new Exception("Señor usuario su correo esta mal no cumple con los requisitos para ser correo");
+            throw new Exception(Mensajes.CORREO_INVALIDO.getMensaje());
         }
         else
         {

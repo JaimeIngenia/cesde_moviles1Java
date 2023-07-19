@@ -31,7 +31,7 @@ public class Main {
 
         //VALIDACIONES PARA USUARIO
 
-        /*System.out.println("  -  Digita tus nombres y apellidos");
+      /* System.out.println("  -  Digita tus nombres y apellidos");
         usuarioObjeto.setNombres(teclado.nextLine());
         System.out.println(usuarioObjeto.getNombres());
 
@@ -39,12 +39,16 @@ public class Main {
         usuarioObjeto.setCorreoElectronico(teclado.nextLine());
         System.out.println(usuarioObjeto.getCorreoElectronico());
 
+        System.out.println("Digite su ubicacion: ");
+        usuarioObjeto.setUbicacion(teclado.nextInt());
+        System.out.println(usuarioObjeto.getUbicacion());
+
         System.out.println("Mira todos los datos");
         System.out.println(usuarioObjeto.toString());*/
 
         //VALIDACIONES LOCAL
 
-        /*        System.out.println("Ingrese el número nit, en tabla Local");
+        /*System.out.println("Ingrese el número nit, en tabla Local");
         localObjeto.setNit(teclado.nextLine());
         System.out.println(localObjeto.getNit());
 
@@ -61,23 +65,23 @@ public class Main {
         ofertaObjeto.setTitulo(teclado.nextLine());
         System.out.println(ofertaObjeto.getTitulo());*/
 
-        /*System.out.println("Ingrese el año de la fecha1");
-        String anioPrincipal = teclado.next();
-        ofertaObjeto.setAnioFechaUno(anioPrincipal);
+        System.out.println("Ingrese el año de la fecha1");
+        Integer anioPrincipal = teclado.nextInt();
+
 
         System.out.println("Ingrese el mes de la fecha1");
-        String mesPrincipal = teclado.next();
-        ofertaObjeto.setMesFechaUno(mesPrincipal);
+        Integer mesPrincipal = teclado.nextInt();
+
 
         System.out.println("Ingrese el día de la fecha1");
-        String diaPrincipal = teclado.next();
-        ofertaObjeto.setDiaFechaUno(diaPrincipal);
+        Integer diaPrincipal = teclado.nextInt();
 
-        Integer anioPrincipalInteger = Integer.parseInt(anioPrincipal);
-        Integer mesPrincipalInteger = Integer.parseInt(mesPrincipal);
-        Integer diaPrincipalInteger = Integer.parseInt(diaPrincipal);
+        ofertaObjeto.setFechaInicio(anioPrincipal,mesPrincipal,diaPrincipal);
+
+
+
 //*********************************************************************************************************************************************
-        LocalDate fechaUnoFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioPrincipalInteger,mesPrincipalInteger,diaPrincipalInteger);
+        //LocalDate fechaUnoFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioPrincipalInteger,mesPrincipalInteger,diaPrincipalInteger);//ponerla en un util
 //*********************************************************************************************************************************************
 
 
@@ -100,13 +104,37 @@ public class Main {
         LocalDate fechaDosFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioSecundariolInteger,mesSecundarioInteger,diaSecundarioInteger);
 //*********************************************************************************************************************************************
 
-        System.out.println(ofertaObjeto.diferenciaFechas(fechaUnoFaseUno,fechaDosFaseUno));*/
 
-        /*System.out.println("Digite el costo por persona de la tabla Oferta");
+
+        /*        System.out.println("Digite el costo por persona de la tabla Oferta");
         ofertaObjeto.setCostoPersona(teclado.nextDouble());
         System.out.println(ofertaObjeto.getCostoPersona());*/
 
         //VALIDACIONES RESERVA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

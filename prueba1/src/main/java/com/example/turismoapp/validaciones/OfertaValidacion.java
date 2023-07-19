@@ -61,4 +61,16 @@ public class OfertaValidacion {
     }
 
 
+    public Boolean validarDosFechas ( LocalDate fechaInicio, LocalDate fechaFin) throws Exception{
+        if(!utilObjeto.diferenciaFechas(fechaInicio,fechaFin)){
+            throw new Exception("Señor usuario las fechas son ilogicas");
+        }else{
+            return true;
+        }
+
+    }
+
+
+
+
 }

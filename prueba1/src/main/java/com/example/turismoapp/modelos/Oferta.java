@@ -11,7 +11,7 @@ public class Oferta {
     private Integer id;
     private String titulo;
     private String descripcion;
-    //private LocalDate fechaInicio;
+    private LocalDate fechaInicio;
 
     private String diaFechaUno;
     private String mesFechaUno;
@@ -19,6 +19,8 @@ public class Oferta {
     private String diaFechaDos;
     private String mesFechaDos;
     private String anioFechaDos;
+
+    private LocalDate fechaFin;
 
 
     //private LocalDate fechaFin;
@@ -35,16 +37,18 @@ public class Oferta {
     }
 //CONSTRUCTOR LLENO
 
-    public Oferta(Integer id, String titulo, String descripcion, String diaFechaUno, String mesFechaUno, String anioFechaUno, String diaFechaDos, String mesFechaDos, String anioFechaDos, Double costoPersona, Integer idLocal, OfertaValidacion validarObjetoOferta, Util utilObjeto) {
+    public Oferta(Integer id, String titulo, String descripcion, LocalDate fechaInicio, String diaFechaUno, String mesFechaUno, String anioFechaUno, String diaFechaDos, String mesFechaDos, String anioFechaDos, LocalDate fechaFin, Double costoPersona, Integer idLocal, OfertaValidacion validarObjetoOferta, Util utilObjeto) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
+        this.fechaInicio = fechaInicio;
         this.diaFechaUno = diaFechaUno;
         this.mesFechaUno = mesFechaUno;
         this.anioFechaUno = anioFechaUno;
         this.diaFechaDos = diaFechaDos;
         this.mesFechaDos = mesFechaDos;
         this.anioFechaDos = anioFechaDos;
+        this.fechaFin = fechaFin;
         this.costoPersona = costoPersona;
         this.idLocal = idLocal;
         this.validarObjetoOferta = validarObjetoOferta;
@@ -54,6 +58,45 @@ public class Oferta {
 
 // GETTERS Y SETTERS
 
+
+    public LocalDate getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Integer anio, Integer mes, Integer dia) {
+
+        try {
+            //VALIDAR EL AÑO, Validar el mes y valdar el dia
+            //this.validarObjetoOferta.validarAnio(anio);
+            //this.validarObjetoOferta.validarAnio(anio);
+            //this.validarObjetoOferta.validarAnio(anio);
+            LocalDate fecha = LocalDate.of(anio,mes,dia);
+            this.validarObjetoOferta.validarDosFechas(this.fechaInicio,fecha);
+            this.fechaFin = fechaFin;
+
+        }
+        catch (Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
+
+
+
+    }
+
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(Integer anio, Integer mes, Integer dia) {
+
+
+
+        LocalDate fecha = LocalDate.of(anio,mes,dia);
+
+        this.fechaInicio = fecha;
+    }
 
     public Integer getId() {
         return id;
@@ -184,18 +227,5 @@ public class Oferta {
         return fechaConfigurada_dos;
     }
 
-    public Long diferenciaFechas (LocalDate fechaUno, LocalDate fechaDos ) throws Exception {
 
-        try
-        {
-            Long diferencia = ChronoUnit.DAYS.between(fechaUno,fechaDos);
-            this.validarObjetoOferta.validarDiferenciaFechaOferta(diferencia);
-            return diferencia;
-        }
-        catch (Exception error)
-        {
-            System.out.println(error.getMessage());
-        }
-        return null;
-    }
 }
