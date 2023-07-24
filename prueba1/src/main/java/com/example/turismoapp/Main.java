@@ -31,7 +31,7 @@ public class Main {
 
         //VALIDACIONES PARA USUARIO
 
-        /* System.out.println("  -  Digita tus nombres y apellidos");
+        /*System.out.println("  -  Digita tus nombres y apellidos");
         usuarioObjeto.setNombres(teclado.nextLine());
         System.out.println(usuarioObjeto.getNombres());
 
@@ -50,8 +50,8 @@ public class Main {
 
         /*System.out.println("Ingrese el número nit, en tabla Local");
         localObjeto.setNit(teclado.nextLine());
-        System.out.println(localObjeto.getNit());
-
+        System.out.println(localObjeto.getNit());*/
+        /*
         System.out.println("Ingrese el nombre de su empresa, en tabla Local");
         localObjeto.setNombre(teclado.nextLine());
         System.out.println(localObjeto.getNombre());
@@ -61,12 +61,12 @@ public class Main {
 
         //VALIDACIONES OFERTA
 
-        /*System.out.println("Digite el titulo de la tabla Ofertas");
+        /* System.out.println("Digite el titulo de la tabla Ofertas");
         ofertaObjeto.setTitulo(teclado.nextLine());
-        System.out.println(ofertaObjeto.getTitulo());*/
+        System.out.println(ofertaObjeto.getTitulo());
+*/
 
-
-        System.out.println("Ingrese el año de la fecha1");
+        /*  System.out.println("Ingrese el año de la fecha1");
         Integer anioPrincipal = teclado.nextInt();
 
 
@@ -91,13 +91,11 @@ public class Main {
         System.out.println("Ingrese el día de la fecha2");
         Integer diaSecundario = teclado.nextInt();
 
-
 //*********************************************************************************************************************************************
         ofertaObjeto.setFechaFin(anioSecundario,mesSecundario,diaSecundario);
 //*********************************************************************************************************************************************
-
-
-        /*        System.out.println("Digite el costo por persona de la tabla Oferta");
+*/
+        /*System.out.println("Digite el costo por persona de la tabla Oferta");
         ofertaObjeto.setCostoPersona(teclado.nextDouble());
         System.out.println(ofertaObjeto.getCostoPersona());*/
 
@@ -117,8 +115,13 @@ public class Main {
 //*********************************************************************************************************************************************
         reservaObjeto.setFechaReserva(anioPrincipalReserva,mesPrincipalReserva,diaPrincipalReserva);
 //*********************************************************************************************************************************************
-        System.out.println(reservaObjeto.getFechaReserva());*/
+        System.out.println(reservaObjeto.getFechaReserva());
 
+         */
+
+        System.out.println("Digite la cantidad de personas para hacer las correspondientes reservas");
+        Integer numeroReservas = teclado.nextInt();
+        reservaObjeto.setNumeroPersonas(numeroReservas);
 
 
 

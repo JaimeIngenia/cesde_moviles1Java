@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class Reserva {
 //ATRIBUTOS - VARIABLES DATOS
+    private Integer numeroPersonas;
     private Integer id;
     private Integer idUsuario;
     private Integer idOferta;
@@ -24,13 +25,14 @@ public class Reserva {
 
 //CONSTRUCTOR LLENO
 
-    public Reserva(Integer id, Integer idUsuario, Integer idOferta, Double costoTotal, LocalDate fechaReserva, ReservaValidacion validarObjetoReserva) {
+    public Reserva(Integer numeroPersonas,Integer id, Integer idUsuario, Integer idOferta, Double costoTotal, LocalDate fechaReserva, ReservaValidacion validarObjetoReserva) {
         this.id = id;
         this.idUsuario = idUsuario;
         this.idOferta = idOferta;
         this.costoTotal = costoTotal;
         this.fechaReserva = fechaReserva;
         this.validarObjetoReserva = validarObjetoReserva;
+        this.numeroPersonas = numeroPersonas;
     }
 
 
@@ -101,5 +103,13 @@ public class Reserva {
         this.validarObjetoReserva = validarObjetoReserva;
     }
 
-    //METODOS JAIME
+    public Integer getNumeroPersonas() {
+        return numeroPersonas;
+    }
+
+    public void setNumeroPersonas(Integer numeroPersonas) throws Exception {
+        this.validarObjetoReserva.validarNumeroReservas(numeroPersonas);
+        this.numeroPersonas = numeroPersonas;
+    }
+//METODOS JAIME
 }

@@ -86,6 +86,15 @@ public class ReservaValidacion {
         }
     }
 
+    public Boolean validarNumeroReservas ( Integer y) throws Exception {
+        if( !( (y>0) && (y<5) )){
+            throw new Exception("Señor usuario está sobrepasando el máximo de personas");
+        }
+        else{
+            return true;
+        }
+    }
+
 
 
 }

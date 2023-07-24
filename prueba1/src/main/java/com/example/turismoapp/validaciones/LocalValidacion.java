@@ -16,10 +16,11 @@ public class LocalValidacion {
         //\\d{10}
         //\\d+
         //if(utilObjeto.buscarCoincidencias(expresionRegularNit,nit))
+
         if(!utilObjeto.buscarCoincidencias(expresionRegularNit,nit)){
             throw new Exception("Señor usuario su nit esta mal, debe tener solo dígitos, no caracteres");
         }
-        else if(nit.length()<10)
+        else if(!(nit.length() == 10))
         {
             throw new Exception("Señor usuario su nit esta mal, debe tener al menos 10 digitos");
         }
