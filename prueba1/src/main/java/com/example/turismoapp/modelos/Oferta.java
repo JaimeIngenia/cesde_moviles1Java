@@ -13,15 +13,7 @@ public class Oferta {
     private String descripcion;
     private LocalDate fechaInicio;
 
-    private String diaFechaUno;
-    private String mesFechaUno;
-    private String anioFechaUno;
-    private String diaFechaDos;
-    private String mesFechaDos;
-    private String anioFechaDos;
-
     private LocalDate fechaFin;
-
 
     //private LocalDate fechaFin;
     private Double costoPersona;
@@ -37,17 +29,11 @@ public class Oferta {
     }
 //CONSTRUCTOR LLENO
 
-    public Oferta(Integer id, String titulo, String descripcion, LocalDate fechaInicio, String diaFechaUno, String mesFechaUno, String anioFechaUno, String diaFechaDos, String mesFechaDos, String anioFechaDos, LocalDate fechaFin, Double costoPersona, Integer idLocal, OfertaValidacion validarObjetoOferta, Util utilObjeto) {
+    public Oferta(Integer id, String titulo, String descripcion, LocalDate fechaInicio, LocalDate fechaFin, Double costoPersona, Integer idLocal, OfertaValidacion validarObjetoOferta, Util utilObjeto) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fechaInicio = fechaInicio;
-        this.diaFechaUno = diaFechaUno;
-        this.mesFechaUno = mesFechaUno;
-        this.anioFechaUno = anioFechaUno;
-        this.diaFechaDos = diaFechaDos;
-        this.mesFechaDos = mesFechaDos;
-        this.anioFechaDos = anioFechaDos;
         this.fechaFin = fechaFin;
         this.costoPersona = costoPersona;
         this.idLocal = idLocal;
@@ -66,12 +52,14 @@ public class Oferta {
     public void setFechaFin(Integer anio, Integer mes, Integer dia) {
 
         try {
-            //VALIDAR EL AÑO, Validar el mes y valdar el dia
-            //this.validarObjetoOferta.validarAnio(anio);
-            //this.validarObjetoOferta.validarAnio(anio);
-            //this.validarObjetoOferta.validarAnio(anio);
+            this.validarObjetoOferta.validarAnio(anio);
+            this.validarObjetoOferta.validarMes(mes);
+            this.validarObjetoOferta.validarDia(dia);
+
             LocalDate fecha = LocalDate.of(anio,mes,dia);
+
             this.validarObjetoOferta.validarDosFechas(this.fechaInicio,fecha);
+
             this.fechaFin = fechaFin;
 
         }
@@ -91,11 +79,21 @@ public class Oferta {
 
     public void setFechaInicio(Integer anio, Integer mes, Integer dia) {
 
-
+    try{
+        this.validarObjetoOferta.validarAnio(anio);
+        this.validarObjetoOferta.validarMes(mes);
+        this.validarObjetoOferta.validarDia(dia);
 
         LocalDate fecha = LocalDate.of(anio,mes,dia);
-
         this.fechaInicio = fecha;
+
+    }
+    catch(Exception error)
+        {
+            System.out.println(error.getMessage());
+        }
+
+
     }
 
     public Integer getId() {
@@ -131,53 +129,7 @@ public class Oferta {
         this.descripcion = descripcion;
     }
 
-    public String getDiaFechaUno() {
-        return diaFechaUno;
-    }
 
-    public void setDiaFechaUno(String diaFechaUno) {
-        this.diaFechaUno = diaFechaUno;
-    }
-
-    public String getMesFechaUno() {
-        return mesFechaUno;
-    }
-
-    public void setMesFechaUno(String mesFechaUno) {
-        this.mesFechaUno = mesFechaUno;
-    }
-
-    public String getAnioFechaUno() {
-        return anioFechaUno;
-    }
-
-    public void setAnioFechaUno(String anioFechaUno) {
-        this.anioFechaUno = anioFechaUno;
-    }
-
-    public String getDiaFechaDos() {
-        return diaFechaDos;
-    }
-
-    public void setDiaFechaDos(String diaFechaDos) {
-        this.diaFechaDos = diaFechaDos;
-    }
-
-    public String getMesFechaDos() {
-        return mesFechaDos;
-    }
-
-    public void setMesFechaDos(String mesFechaDos) {
-        this.mesFechaDos = mesFechaDos;
-    }
-
-    public String getAnioFechaDos() {
-        return anioFechaDos;
-    }
-
-    public void setAnioFechaDos(String anioFechaDos) {
-        this.anioFechaDos = anioFechaDos;
-    }
 
     public Double getCostoPersona() {
         return costoPersona;

@@ -1,6 +1,7 @@
 package com.example.turismoapp.utilidades;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,6 +34,25 @@ public class Util {
         }
         else {
             return false;
+        }
+
+    }
+
+    public Boolean formato ( Integer anio, Integer mes, Integer dia ) {
+
+        DateTimeFormatter formatoJaime = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate nuevaFecha = LocalDate.of(anio,mes,dia);
+        String fechaFormateada = nuevaFecha.format(formatoJaime);
+
+        if(fechaFormateada.equals("dd/MM/yyyy"))
+        {
+//            return true;
+            return true;
+        }
+        else
+        {
+            //return false;
+            return true;
         }
 
     }

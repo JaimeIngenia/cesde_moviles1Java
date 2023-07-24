@@ -29,15 +29,51 @@ public class ReservaValidacion {
         }
     }
 
-    public Boolean validarAnio (String x) throws Exception {
-        String expresionRegularFechaAnio = "^[0-9]+$";
-        if(!utilObjeto.buscarCoincidencias(expresionRegularFechaAnio,x))
-        {
-            throw new Exception("Señor usuario su dato solo debe ser numérico");
+
+    public Boolean validarFormato ( Integer x, Integer y, Integer z) throws Exception{
+        if(!utilObjeto.formato(x,y,z)){
+            throw new Exception("Señor el formato de fecha debe ser dd/MM/yyyy");
+        }else{
+            return true;
+        }
+
+    }
+
+
+
+
+    public Boolean validarAnio ( Integer anio ) throws Exception{
+        if( (anio>0) && (anio<2024) ){
+            return true;
+        }
+        else{
+
+            throw new Exception("Señor usuario el año debe ser positivo y menor a 2023");
+        }
+    }
+
+    public Boolean validarMes ( Integer mes ) throws Exception{
+        if( (mes>0) && (mes<12) ){
+//            throw new Exception("Señor usuario el mes debe ser de 0 a 12");
+            return true;
         }
         else
         {
+//            return true;
+            throw new Exception("Señor usuario el mes debe ser de 0 a 12");
+        }
+    }
+
+
+    public Boolean validarDia( Integer dia ) throws Exception{
+        if( (dia>0) && (dia<30) ){
+            //throw new Exception("Señor usuario el dia debe ser de 0 a 30");
             return true;
+        }
+        else
+        {
+//            return true;
+            throw new Exception("Señor usuario el dia debe ser de 0 a 30");
         }
     }
 
@@ -49,5 +85,7 @@ public class ReservaValidacion {
             return true;
         }
     }
+
+
 
 }

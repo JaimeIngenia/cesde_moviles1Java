@@ -31,7 +31,7 @@ public class Main {
 
         //VALIDACIONES PARA USUARIO
 
-      /* System.out.println("  -  Digita tus nombres y apellidos");
+        /* System.out.println("  -  Digita tus nombres y apellidos");
         usuarioObjeto.setNombres(teclado.nextLine());
         System.out.println(usuarioObjeto.getNombres());
 
@@ -65,6 +65,7 @@ public class Main {
         ofertaObjeto.setTitulo(teclado.nextLine());
         System.out.println(ofertaObjeto.getTitulo());*/
 
+
         System.out.println("Ingrese el año de la fecha1");
         Integer anioPrincipal = teclado.nextInt();
 
@@ -75,35 +76,25 @@ public class Main {
 
         System.out.println("Ingrese el día de la fecha1");
         Integer diaPrincipal = teclado.nextInt();
-
+//*********************************************************************************************************************************************
         ofertaObjeto.setFechaInicio(anioPrincipal,mesPrincipal,diaPrincipal);
-
-
-
 //*********************************************************************************************************************************************
-        //LocalDate fechaUnoFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioPrincipalInteger,mesPrincipalInteger,diaPrincipalInteger);//ponerla en un util
-//*********************************************************************************************************************************************
-
 
         System.out.println("Ingrese el año de la fecha2");
-        String anioSecundario = teclado.next();
-        ofertaObjeto.setAnioFechaDos(anioSecundario);
+        Integer anioSecundario = teclado.nextInt();
+
 
         System.out.println("Ingrese el mes de la fecha2");
-        String mesSecundario = teclado.next();
-        ofertaObjeto.setMesFechaDos(mesSecundario);
+        Integer mesSecundario = teclado.nextInt();
+
 
         System.out.println("Ingrese el día de la fecha2");
-        String diaSecundario = teclado.next();
-        ofertaObjeto.setDiaFechaDos(diaSecundario);
+        Integer diaSecundario = teclado.nextInt();
 
-        Integer anioSecundariolInteger = Integer.parseInt(anioSecundario);
-        Integer mesSecundarioInteger = Integer.parseInt(mesSecundario);
-        Integer diaSecundarioInteger = Integer.parseInt(diaSecundario);
-//*********************************************************************************************************************************************
-        LocalDate fechaDosFaseUno = ofertaObjeto.cambiarIntegerLocalDate(anioSecundariolInteger,mesSecundarioInteger,diaSecundarioInteger);
-//*********************************************************************************************************************************************
 
+//*********************************************************************************************************************************************
+        ofertaObjeto.setFechaFin(anioSecundario,mesSecundario,diaSecundario);
+//*********************************************************************************************************************************************
 
 
         /*        System.out.println("Digite el costo por persona de la tabla Oferta");
@@ -113,7 +104,20 @@ public class Main {
         //VALIDACIONES RESERVA
 
 
+        /*System.out.println("Ingrese el año de la fecha Reserva");
+        Integer anioPrincipalReserva = teclado.nextInt();
 
+
+        System.out.println("Ingrese el mes de la fecha Reserva");
+        Integer mesPrincipalReserva = teclado.nextInt();
+
+
+        System.out.println("Ingrese el día de la fecha Reserva");
+        Integer diaPrincipalReserva = teclado.nextInt();
+//*********************************************************************************************************************************************
+        reservaObjeto.setFechaReserva(anioPrincipalReserva,mesPrincipalReserva,diaPrincipalReserva);
+//*********************************************************************************************************************************************
+        System.out.println(reservaObjeto.getFechaReserva());*/
 
 
 
