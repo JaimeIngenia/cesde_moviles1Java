@@ -26,6 +26,12 @@ class UsuarioTest {
     }
 
     @Test
-    public void setIncorrectoNombres(){}
+    public void setIncorrectoNombres(){
+
+        String nombrePruebaInvalido = "Jaime231";
+        objetoUsuario.setNombres(nombrePruebaInvalido);
+        Assertions.assertNotEquals(nombrePruebaInvalido , objetoUsuario.getNombres());
+
+    }
 
 }
