@@ -125,13 +125,13 @@ public class Main {
 
 
 
-        /////******************************************************  herencia *************************************************
+        /////******************************************************  Herencia y clases abstractas *************************************************
 
 
         Afiliado objetoAfiliado = new Afiliado();
         NoAfiliado objetoNoAfiliado = new NoAfiliado();
         Scanner teclado = new Scanner(System.in);
-        Usuario usuarioObjeto = new Usuario();
+        //Usuario usuarioObjeto = new Usuario(); //No se puede inicializar
 
         //ACCEDIENDO a los atributos de un objeto
         // Validando a Afiliado
@@ -140,6 +140,7 @@ public class Main {
         objetoAfiliado.setNombres("ana");
         */
         //Validando a No Afiliado
+
         System.out.println("Señor usuario escriba el numero de reservas");
         Integer numeroReservas = teclado.nextInt();
 

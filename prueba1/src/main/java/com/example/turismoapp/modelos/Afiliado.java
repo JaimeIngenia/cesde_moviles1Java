@@ -23,6 +23,12 @@ public class Afiliado extends Usuario{
     public Afiliado() {
     }
 
+    @Override
+    public Double calcularAnualidad() {
+        Double calcular = this.getCostoAnual()-this.getValorMembresia()*0.2;
+        return calcular;
+    }
+
 //CONSTRUCTOR LLENO
 
 

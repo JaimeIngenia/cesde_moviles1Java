@@ -14,6 +14,12 @@ public class NoAfiliado extends Usuario {
     public NoAfiliado() {
     }
 
+    @Override
+    public Double calcularAnualidad() {
+        Double calcular = this.getCostoAnual()+this.getIVA();
+        return calcular;
+    }
+
     public NoAfiliado(Integer id, String nombres, String documento, Integer ubicacion, String correoElectronico, Integer numeroReservasMensuales) {
         super(id, nombres, documento, ubicacion, correoElectronico);
         NumeroReservasMensuales = numeroReservasMensuales;
