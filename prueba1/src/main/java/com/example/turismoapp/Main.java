@@ -1,9 +1,7 @@
 package com.example.turismoapp;
 
-import com.example.turismoapp.modelos.Local;
-import com.example.turismoapp.modelos.Oferta;
-import com.example.turismoapp.modelos.Reserva;
-import com.example.turismoapp.modelos.Usuario;
+import com.example.turismoapp.modelos.*;
+import com.example.turismoapp.validaciones.NoAfiliadoValidacion;
 import com.example.turismoapp.validaciones.ReservaValidacion;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +18,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         //OBJETOS
+/*
         Scanner teclado = new Scanner(System.in);
         Usuario usuarioObjeto = new Usuario();
         Reserva reservaObjeto = new Reserva();
@@ -28,6 +27,7 @@ public class Main {
 
         System.out.println("***Bienvenido***");
         System.out.println("1. Recogiendo datos del usuario: ");
+*/
 
         //VALIDACIONES PARA USUARIO
 
@@ -119,10 +119,32 @@ public class Main {
 
          */
 
-        System.out.println("Digite la cantidad de personas para hacer las correspondientes reservas");
+/*        System.out.println("Digite la cantidad de personas para hacer las correspondientes reservas");
         Integer numeroReservas = teclado.nextInt();
-        reservaObjeto.setNumeroPersonas(numeroReservas);
+        reservaObjeto.setNumeroPersonas(numeroReservas);*/
 
+
+
+        /////******************************************************  herencia *************************************************
+
+
+        Afiliado objetoAfiliado = new Afiliado();
+        NoAfiliado objetoNoAfiliado = new NoAfiliado();
+        Scanner teclado = new Scanner(System.in);
+        Usuario usuarioObjeto = new Usuario();
+
+        //ACCEDIENDO a los atributos de un objeto
+        // Validando a Afiliado
+        /*usuarioObjeto.setNombres("1234");
+
+        objetoAfiliado.setNombres("ana");
+        */
+        //Validando a No Afiliado
+        System.out.println("Señor usuario escriba el numero de reservas");
+        Integer numeroReservas = teclado.nextInt();
+
+        objetoNoAfiliado.setNumeroReservasMensuales(numeroReservas);
+        System.out.println(objetoNoAfiliado.getNumeroReservasMensuales());
 
 
 
