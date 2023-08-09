@@ -1,6 +1,7 @@
 package com.example.turismoapp.validaciones;
 
 import com.example.turismoapp.modelos.Local;
+import com.example.turismoapp.utilidades.Mensajes;
 import com.example.turismoapp.utilidades.Util;
 
 import java.time.LocalDate;
@@ -14,22 +15,6 @@ public class ReservaValidacion {
 
     //METODOS
 
-    public Boolean validarFechaReserva (String x)throws Exception {
-
-        String expresionRegularFechaReserva = "^[0-9]+$\n";
-
-        if(!utilObjeto.buscarCoincidencias(expresionRegularFechaReserva,x) )
-        //if(!coincidenciaFechaReserva.matches())
-        {
-            throw new Exception("Señor usuario su dato ingresado debe ser únicamente un número");
-        }
-        else
-        {
-            return true;
-        }
-    }
-
-
     public Boolean validarFormato ( Integer x, Integer y, Integer z) throws Exception{
         if(!utilObjeto.formato(x,y,z)){
             throw new Exception("Señor el formato de fecha debe ser dd/MM/yyyy");
@@ -38,9 +23,6 @@ public class ReservaValidacion {
         }
 
     }
-
-
-
 
     public Boolean validarAnio ( Integer anio ) throws Exception{
         if( (anio>0) && (anio<2024) ){
@@ -77,18 +59,9 @@ public class ReservaValidacion {
         }
     }
 
-    public Boolean validarDiferenciaFechaReserva (Long x) throws Exception {
-        if(x<0){
-            throw new Exception("Señor usuario la fecha final es menor a la fecha inicial, eso es ilógico!");
-        }
-        else {
-            return true;
-        }
-    }
-
     public Boolean validarNumeroReservas ( Integer y) throws Exception {
         if( !( (y>0) && (y<5) )){
-            throw new Exception("Señor usuario está sobrepasando el máximo de personas");
+            throw new Exception(Mensajes.NUMERO_RESERVAS.getMensaje());
         }
         else{
             return true;

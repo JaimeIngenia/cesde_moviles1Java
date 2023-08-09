@@ -15,12 +15,14 @@ class UsuarioTest {
         this.objetoUsuario = new Usuario();
         }
 
+
+    //NOMBRES
     @Test
     public void setCorrectoNombres () {
 
         String nombrePruebaValido = "Jaime Andrés Moncayo Parra";  //PREPARANDO
 
-        this.objetoUsuario.setNombres( nombrePruebaValido );  //Probando y Ejecutando el set
+        objetoUsuario.setNombres( nombrePruebaValido );  //Probando y Ejecutando el set
 
         Assertions.assertEquals(nombrePruebaValido  , this.objetoUsuario.getNombres()); //VERIFICAR
     }
@@ -34,4 +36,38 @@ class UsuarioTest {
 
     }
 
+    //UBICACION
+
+    @Test
+    public void setUbicacionCorrecto(){
+        Integer ubicacionValido = 2;  //PREPARANDO
+
+        objetoUsuario.setUbicacion( ubicacionValido );  //Probando y Ejecutando el set
+
+        Assertions.assertEquals(ubicacionValido  , this.objetoUsuario.getUbicacion()); //VERIFICAR
+    }
+
+   @Test
+    public void setUbicacionIncorrecto(){
+        Integer ubicacionInvalido = 12;
+        objetoUsuario.setUbicacion(ubicacionInvalido);
+        Assertions.assertNotEquals(ubicacionInvalido , objetoUsuario.getUbicacion());
+    }
+
+    //CORREo ELECTRONICO
+   @Test
+    public void setCorreoElectronicoCorrecto(){
+       String correoValido = "jamoncayop@unal.edu.co";  //PREPARANDO
+
+       objetoUsuario.setCorreoElectronico( correoValido );  //Probando y Ejecutando el set
+
+       Assertions.assertEquals(correoValido  , this.objetoUsuario.getCorreoElectronico()); //VERIFICAR
+    }
+
+    @Test
+    public void setCorreoElectronicoIncorrecto(){
+        String correoInvalido = "jaimeunalcom";
+        objetoUsuario.setCorreoElectronico(correoInvalido);
+        Assertions.assertNotEquals(correoInvalido , objetoUsuario.getCorreoElectronico());
+    }
 }

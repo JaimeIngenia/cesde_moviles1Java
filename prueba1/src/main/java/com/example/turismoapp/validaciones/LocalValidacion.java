@@ -1,5 +1,6 @@
 package com.example.turismoapp.validaciones;
 
+import com.example.turismoapp.utilidades.Mensajes;
 import com.example.turismoapp.utilidades.Util;
 
 import java.util.regex.Matcher;
@@ -18,11 +19,11 @@ public class LocalValidacion {
         //if(utilObjeto.buscarCoincidencias(expresionRegularNit,nit))
 
         if(!utilObjeto.buscarCoincidencias(expresionRegularNit,nit)){
-            throw new Exception("Señor usuario su nit esta mal, debe tener solo dígitos, no caracteres");
+            throw new Exception(Mensajes.NIT_SOLO_DIGITOS.getMensaje());
         }
         else if(!(nit.length() == 10))
         {
-            throw new Exception("Señor usuario su nit esta mal, debe tener al menos 10 digitos");
+            throw new Exception(Mensajes.NIT_10_DIGITOS.getMensaje());
         }
         else
         {
@@ -36,7 +37,7 @@ public class LocalValidacion {
 
         if(!utilObjeto.buscarCoincidencias(expresionRegularNombreLocal,nombre))
         {
-            throw new Exception("Señor usuario su nombre de local esta mal, no debe sobre pasar los 30 caracteres");
+            throw new Exception(Mensajes.NOMBRE_LOCAL_30_CARACTERES.getMensaje());
         }
         else
         {

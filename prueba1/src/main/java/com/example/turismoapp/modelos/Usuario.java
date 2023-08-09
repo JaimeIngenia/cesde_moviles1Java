@@ -47,9 +47,9 @@ public class Usuario {
             this.validacionJaime.validarNombre(nombres);
             this.nombres = nombres;
         }
-        catch (Exception error)
+        catch (Exception dilbani)
         {
-            System.out.println(error.getMessage());
+            System.out.println(dilbani.getMessage());
         }
 
     }

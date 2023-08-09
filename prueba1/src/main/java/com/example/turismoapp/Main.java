@@ -20,22 +20,51 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         //OBJETOS
+
+
         Scanner teclado = new Scanner(System.in);
+
+
+
         Usuario usuarioObjeto = new Usuario();
-        Reserva reservaObjeto = new Reserva();
+        Usuario jaimeObjeto = new Usuario();
+
+
+
+/*      Reserva reservaObjeto = new Reserva();
         Local localObjeto = new Local();
         Oferta ofertaObjeto = new Oferta();
+        */
+
+
+
 
         System.out.println("***Bienvenido***");
         System.out.println("1. Recogiendo datos del usuario: ");
 
         //VALIDACIONES PARA USUARIO
 
-        /*System.out.println("  -  Digita tus nombres y apellidos");
+        System.out.println("  -  Digita tus nombres y apellidos del primer objeto");
         usuarioObjeto.setNombres(teclado.nextLine());
-        System.out.println(usuarioObjeto.getNombres());
 
-        System.out.println("Digite su correo electrónico: ");
+
+
+
+
+        System.out.println("  -  Digita tus nombres y apellidos del SEGUNDO OBJETO ");
+        jaimeObjeto.setNombres(teclado.nextLine());
+
+
+        System.out.println("ESTOS SON LOS NOMBRES");
+        System.out.println("EL Objeto NUMERO dos TIENE COMO NOMBRE SETEADO A:");
+        System.out.println(jaimeObjeto.getNombres());
+
+
+        System.out.println("EL Objeto NUMERO UNO TIENE COMO NOMBRE SETEADO A:");
+        System.out.println(jaimeObjeto.getNombres());
+
+
+/*        System.out.println("Digite su correo electrónico: ");
         usuarioObjeto.setCorreoElectronico(teclado.nextLine());
         System.out.println(usuarioObjeto.getCorreoElectronico());
 
@@ -119,9 +148,9 @@ public class Main {
 
          */
 
-        System.out.println("Digite la cantidad de personas para hacer las correspondientes reservas");
+/*        System.out.println("Digite la cantidad de personas para hacer las correspondientes reservas");
         Integer numeroReservas = teclado.nextInt();
-        reservaObjeto.setNumeroPersonas(numeroReservas);
+        reservaObjeto.setNumeroPersonas(numeroReservas);*/
 
 
 

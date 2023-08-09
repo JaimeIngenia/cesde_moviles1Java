@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db42c9c8-249f-434c-acc4-7d32d4fb7f75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/cesde_moviles1Java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba1/src/main/java/com/example/turismoapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/prueba1/src/main/java/com/example/turismoapp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba1/src/main/java/com/example/turismoapp/utilidades/Mensajes.java" beforeDir="false" afterPath="$PROJECT_DIR$/prueba1/src/main/java/com/example/turismoapp/utilidades/Mensajes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba1/target/classes/com/example/turismoapp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/prueba1/target/classes/com/example/turismoapp/Main.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2T28uo7i0rx2bQzw88yEFUaPllp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db42c9c8-249f-434c-acc4-7d32d4fb7f75" name="Changes" comment="" />
+      <created>1690230041416</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690230041416</updated>
+    </task>
+    <servers />
+  </component>
+</project>
